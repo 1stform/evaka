@@ -548,7 +548,8 @@ export const sv: typeof fi = {
     language: {
       title: 'Språk',
       fi: 'Suomi',
-      sv: 'Svenska'
+      sv: 'Svenska',
+      en: 'English'
     },
     notifications: {
       title: 'Inställningar för meddelanden',

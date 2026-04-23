@@ -334,7 +334,7 @@ type CustomizableStaffAttendanceType = Exclude<StaffAttendanceType, 'PRESENT'>
 
 export interface EmployeeCustomizations {
   appConfig: BaseAppConfig
-  translations: Record<LangEmployee, DeepPartial<TranslationsEmployee>>
+  translations: Partial<Record<LangEmployee, DeepPartial<TranslationsEmployee>>>
   cityLogo: CityLogo
   featureFlags: FeatureFlags
   placementTypes: PlacementType[]
@@ -353,9 +353,9 @@ export interface EmployeeCustomizations {
 export interface EmployeeMobileCustomizations {
   appConfig: BaseAppConfig
   featureFlags: FeatureFlags
-  translations: Record<
+  translations: Partial<Record<
     LangEmployeeMobile,
     DeepPartial<TranslationsEmployeeMobile>
-  >
+  >>
   additionalStaffAttendanceTypes: CustomizableStaffAttendanceType[]
 }

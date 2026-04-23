@@ -539,7 +539,8 @@ export const fi = {
     language: {
       title: 'Kieli',
       fi: 'Suomi',
-      sv: 'Svenska'
+      sv: 'Svenska',
+      en: 'English'
     },
     notifications: {
       title: 'Ilmoitusasetukset',

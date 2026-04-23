@@ -381,6 +381,13 @@ export default React.memo(function Header() {
                       data-qa="lang-sv"
                       translate="no"
                     />
+                    <SelectionChip
+                      text="EN"
+                      selected={lang === 'en'}
+                      onChange={selectLang('en')}
+                      data-qa="lang-en"
+                      translate="no"
+                    />
                   </ChipWrapper>
                 </FixedSpaceRow>
                 <HorizontalLine $slim />

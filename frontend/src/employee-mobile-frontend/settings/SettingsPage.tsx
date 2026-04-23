@@ -96,6 +96,13 @@ export const SettingsPage = React.memo(function SettingsPage({
                         data-qa="lang-sv"
                         translate="no"
                       />
+                      <SelectionChip
+                        text={i18n.settings.language.en}
+                        selected={lang === 'en'}
+                        onChange={selectLang('en')}
+                        data-qa="lang-en"
+                        translate="no"
+                      />
                     </ChipWrapper>
                     <Gap $size="L" />
                   </>

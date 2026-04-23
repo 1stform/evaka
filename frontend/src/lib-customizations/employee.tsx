@@ -12,6 +12,7 @@ import type { StaffAttendanceType } from 'lib-common/generated/api-types/attenda
 import type { JsonOf } from 'lib-common/json'
 
 import { mergeCustomizer } from './common'
+import { en } from './defaults/employee/i18n/en'
 import { fi } from './defaults/employee/i18n/fi'
 import { sv } from './defaults/employee/i18n/sv'
 import type { EmployeeCustomizations } from './types'
@@ -73,13 +74,14 @@ export {
   getPaymentsDueDate
 }
 
-export type Lang = 'fi' | 'sv'
+export type Lang = 'fi' | 'sv' | 'en'
 export type Translations = typeof fi
-export const langs: Lang[] = ['fi', 'sv']
+export const langs: Lang[] = ['fi', 'sv', 'en']
 
 export const translations: Record<Lang, Translations> = {
   fi: mergeWith({}, fi, customizations.translations.fi, mergeCustomizer),
-  sv: mergeWith({}, sv, customizations.translations.sv, mergeCustomizer)
+  sv: mergeWith({}, sv, customizations.translations.sv, mergeCustomizer),
+  en: mergeWith({}, en, customizations.translations.en ?? {}, mergeCustomizer)
 }
 
 export const applicationTypes: ApplicationType[] = (
