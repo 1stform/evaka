@@ -162,7 +162,7 @@ export const en: typeof fi = {
       invoiceRecipient: 'Bill recipient',
       invoicingAddress: 'Billing address',
       lastModified: 'Last modified',
-      lastModifiedBy: (name: string) => `Muokkaaja: ${name}`,
+      lastModifiedBy: (name: string) => `Edited by: ${name}`,
       lastName: 'Last name',
       name: 'Name',
       ophPersonOid: 'OPH person OID',
@@ -238,7 +238,7 @@ export const en: typeof fi = {
     },
     nb: 'Note',
     lastModified: (dateTime: string) => `Last modified: ${dateTime}`,
-    validTo: (date: string) => `Voimassa ${date} saakka`,
+    validTo: (date: string) => `Valid until ${date}`,
     closeModal: 'Close the pop-up window',
     datePicker: {
       previousMonthLabel: 'Last month',
@@ -269,7 +269,7 @@ export const en: typeof fi = {
     applications: 'Applications',
     units: 'Units',
     search: 'Customer information',
-    finance: 'Economic',
+    finance: 'Finance',
     invoices: 'Invoices',
     payments: 'Payments',
     incomeStatements: 'Income statements',
@@ -280,7 +280,7 @@ export const en: typeof fi = {
     logout: 'Sign out'
   },
   footer: {
-    cityLabel: 'The city of Espoo',
+    cityLabel: 'City of Espoo',
     linkLabel: 'Early childhood education in Espoo',
     linkHref: 'https://www.espoo.fi/fi/kasvatus-ja-opetus/varhaiskasvatus'
   },
@@ -656,7 +656,7 @@ export const en: typeof fi = {
       origin: 'Application submission form',
       sent: 'Arrived',
       modified: 'Last modified',
-      modifiedBy: 'Adapter',
+      modifiedBy: 'Editor',
       due: 'To be processed at the latest'
     },
     date: {
@@ -807,7 +807,7 @@ export const en: typeof fi = {
       fields: {
         capacityFactor: 'Factor',
         lastModified: 'Last modified',
-        lastModifiedBy: (name: string) => `Muokkaaja ${name}.`,
+        lastModifiedBy: (name: string) => `Edited by ${name}.`,
         level: 'Level',
         otherAssistanceMeasureType: 'Action',
         status: 'Status',
@@ -817,9 +817,9 @@ export const en: typeof fi = {
         overlap:
           'There is already a duplicate entry for this period. If necessary, edit the previous time period',
         startBeforeMinDate: (date: LocalDate) =>
-          `Tämä tuki voi alkaa aikaisintaan ${date.format()}`,
+          `This support can start on ${date.format()} at the earliest`,
         endAfterMaxDate: (date: LocalDate) =>
-          `Tämän tuen voi myöntää korkeintaan ${date.format()} saakka`
+          `This support can be granted until ${date.format()} at the latest`
       },
       types: {
         daycareAssistanceLevel: {
@@ -922,7 +922,7 @@ export const en: typeof fi = {
         },
         otherActionPlaceholder:
           'You can write here additional information about other support activities.',
-        lastModifiedBy: (name: string) => `Muokkaaja ${name}.`
+        lastModifiedBy: (name: string) => `Edited by ${name}.`
       },
       create: 'Create a new support period',
       removeConfirmation: 'Do you want to remove the support period?',
@@ -933,9 +933,9 @@ export const en: typeof fi = {
         autoCutWarning:
           'Previous overlapping support measures are automatically terminated.',
         startBeforeMinDate: (date: LocalDate) =>
-          `Tämä tukitoimi voi alkaa aikaisintaan ${date.format()}`,
+          `This support measure can start on ${date.format()} at the earliest`,
         endAfterMaxDate: (date: LocalDate) =>
-          `Tämän tukitoimen voi myöntää korkeintaan ${date.format()} saakka`
+          `This support measure can be granted until ${date.format()} at the latest`
       }
     },
     childDocuments: {
@@ -949,11 +949,11 @@ export const en: typeof fi = {
         status: 'Status',
         open: 'Open the document',
         modified: 'Adapted',
-        modifiedBy: (name: string) => `Muokkaaja ${name}.`,
+        modifiedBy: (name: string) => `Edited by ${name}.`,
         unit: 'Unit',
         valid: 'In effect',
         published: 'Published',
-        publishedBy: (name: string) => `Julkaisija ${name}.`,
+        publishedBy: (name: string) => `Published by ${name}.`,
         sent: 'Posted',
         notSent: 'Not sent',
         answered: 'Answered',
@@ -994,7 +994,7 @@ export const en: typeof fi = {
           title: 'Other valid decisions',
           description1: 'You are making a positive decision',
           description2: (validity: DateRange) =>
-            `Lapsella on muita päätöksiä, jotka ovat voimassa nyt tehtävän päätöksen astuessa voimaan ${validity.start.format()}`,
+            `The child has other decisions that are valid when this decision takes effect on ${validity.start.format()}`,
           label: 'Choose the appropriate action for the following decisions*',
           options: {
             end: 'Let\'s hang up',
@@ -1011,7 +1011,7 @@ export const en: typeof fi = {
         lockedError:
           'Another user is editing the document. Try again later.',
         lockedErrorDetailed: (modifiedByName: string, opensAt: string) =>
-          `Käyttäjä ${modifiedByName} on muokkaamassa asiakirjaa. Asiakirjan lukitus vapautuu ${opensAt} mikäli muokkaamista ei jatketa. Yritä myöhemmin uudelleen.`,
+          `User ${modifiedByName} is editing the document. The document lock will be released at ${opensAt} unless editing continues. Please try again later.`,
         saveError: 'Failed to save document.',
         preview: 'Preview',
         publish: 'Publish to guardian',
@@ -1102,7 +1102,7 @@ export const en: typeof fi = {
         validityPeriod: 'Service voucher factor valid'
       },
       lastModified: 'Last modified',
-      lastModifiedBy: (name: string) => `Muokkaaja ${name}.`,
+      lastModifiedBy: (name: string) => `Edited by ${name}.`,
       sectionTitle: 'Service voucher multiplier',
       status: 'Status',
       unknown: 'Unknown',
@@ -1177,8 +1177,8 @@ export const en: typeof fi = {
       updateError: 'Saving the payment change failed',
       deleteError: 'Deletion of payment change failed',
       confirmDelete: 'Do you want to remove the payment change?',
-      lastModifiedAt: (date: string) => `Viimeksi muokattu ${date}`,
-      lastModifiedBy: (name: string) => `Muokkaaja: ${name}`,
+      lastModifiedAt: (date: string) => `Last modified ${date}`,
+      lastModifiedBy: (name: string) => `Edited by: ${name}`,
       editor: {
         titleNew: 'Add a new discount or increase',
         titleEdit: 'Edit the discount or increase',
@@ -1242,7 +1242,8 @@ export const en: typeof fi = {
         btn: 'Create a new investment',
         title: 'New investment',
         text: 'A decision cannot be sent for this investment. If the placement overlaps with the child\'s previously created placements, these placements will be shortened or deleted automatically.',
-        temporaryDaycareWarning: 'NOTE! Do not use reserve investment when making!',
+        temporaryDaycareWarning:
+          'Note: do not use backup placement when creating temporary daycare.',
         startDateMissing: 'The start date is mandatory information',
         unitMissing: 'The unit is missing',
         preschoolTermNotOpen: 'The placement must be in the pre-school period',
@@ -1294,11 +1295,11 @@ export const en: typeof fi = {
             'The service need you have marked overlaps with the previously announced one. If you confirm the service need you marked now, the previously marked service need will be automatically cut off from the overlapping period.'
         },
         optionStartNotValidWarningTitle: (validFrom: LocalDate) =>
-          `Valittu palveluntarvetyyppi on käytettävissä vasta ${validFrom.format()} alkaen`,
+          `The selected service need type is available only from ${validFrom.format()} onwards`,
         optionEndNotValidWarningTitle: (validTo: LocalDate) =>
-          `Valittu palveluntarvetyyppi on käytettävissä vain ${validTo.format()} asti`,
+          `The selected service need type is available only until ${validTo.format()}`,
         optionStartEndNotValidWarningTitle: (validity: FiniteDateRange) =>
-          `Valittu palveluntarvetyyppi on käytettävissä ajalla ${validity.format()}`,
+          `The selected service need type is available during ${validity.format()}`,
         notFullyValidOptionWarning:
           'The selected type of service need must be available all the time. If necessary, create a service requirement in two parts.'
       }
@@ -1352,7 +1353,7 @@ export const en: typeof fi = {
         reject: 'Reject',
         confirmAcceptTitle: 'Will the application for a new service need be accepted?',
         confirmAcceptText: (range: FiniteDateRange, placementChange: boolean) =>
-          `Uusi ${placementChange ? 'placement and' : ''}palveluntarve luodaan ajalle ${range.format()}.`,
+          `A new ${placementChange ? 'placement and ' : ''}service need will be created for ${range.format()}.`,
         shiftCareLabel: 'Evening/day care',
         shiftCareCheckbox: 'The child has the right to evening/day care',
         partWeekLabel: 'Semi-weekly',
@@ -1380,10 +1381,10 @@ export const en: typeof fi = {
       status: 'Status'
     },
     backupCares: {
-      title: 'Backup investments',
-      remove: 'Do you want to remove the reserve investment?',
-      editing: 'in editing',
-      create: 'Create a new backup investment',
+      title: 'Backup placements',
+      remove: 'Do you want to remove the backup placement?',
+      editing: 'being edited',
+      create: 'Create a new backup placement',
       dateRange: 'Backup placement period',
       unit: 'Unit',
       validationNoMatchingPlacement:
@@ -1391,7 +1392,7 @@ export const en: typeof fi = {
       validationChildAlreadyInOtherUnit:
         'The child is already registered in another unit.',
       validationBackupCareNotOpen:
-        'The unit is not open for the entire duration of the reserve investment.'
+        'The unit is not open for the entire duration of the backup placement.'
     },
     backupPickups: {
       title: 'Reserve applicants',
@@ -1405,7 +1406,7 @@ export const en: typeof fi = {
     pedagogicalDocument: {
       create: 'Add new',
       created: 'Added',
-      createdBy: (name: string) => `Lisääjä: ${name}`,
+      createdBy: (name: string) => `Added by: ${name}`,
       date: 'Date',
       descriptionInfo: '',
       description: 'Pedagogical description',
@@ -1414,7 +1415,7 @@ export const en: typeof fi = {
       explanation: '',
       explanationInfo: '',
       lastModified: 'Last modified',
-      lastModifiedBy: (name: string) => `Muokkaaja: ${name}`,
+      lastModifiedBy: (name: string) => `Edited by: ${name}`,
       removeConfirmation: 'Do you want to delete the document?',
       removeConfirmationText:
         'Are you sure you want to delete the pedagogical document and its description text? The deletion cannot be undone, and the document will also be deleted from the custodian\'s view.',
@@ -1433,8 +1434,8 @@ export const en: typeof fi = {
     newAdult: 'Create a carefree adult',
     newChild: 'Create a carefree child',
     addPersonFromVTJ: {
-      title: 'That person from VTJ',
-      modalConfirmLabel: 'That person',
+      title: 'Add person from VTJ',
+      modalConfirmLabel: 'Add person',
       ssnLabel: 'Personal identification number',
       restrictedDetails: 'The person has a security ban',
       badRequest: 'Invalid ID',
@@ -1547,13 +1548,14 @@ export const en: typeof fi = {
       editModalTitle: 'The guardian\'s eVaka rights',
       modalInfoParagraph: (
         <>
-          eVaka-oikeuksilla määritetään, näkeekö huoltaja lapseen liittyvät
-          tiedot eVakassa. Oikeudet voi kieltää{' '}
+          eVaka rights determine whether the guardian can see the child\'s
+          information in eVaka. Rights can be denied{' '}
           <strong>
-            esimerkiksi sosiaalityöntekijän tai muun toimivaltaisen viranomaisen
-            ilmoituksen perusteella
+            for example based on a notice from a social worker or another
+            competent authority
           </strong>{' '}
-          . Oikeudet tulee palauttaa, mikäli kiellolle ei ole enää perustetta.
+          . The rights must be restored if there is no longer any basis for the
+          restriction.
         </>
       ),
       modalUpdateSubtitle:
@@ -1695,8 +1697,8 @@ export const en: typeof fi = {
       title: 'Income information',
       itemHeader: 'Income data for the period',
       itemHeaderNew: 'New income information',
-      lastModifiedAt: (date: string) => `Viimeksi muokattu ${date}`,
-      lastModifiedBy: (name: string) => `Muokkaaja: ${name}`,
+      lastModifiedAt: (date: string) => `Last modified ${date}`,
+      lastModifiedBy: (name: string) => `Edited by: ${name}`,
       details: {
         attachments: 'Appendices',
         name: 'Name',
@@ -1740,7 +1742,7 @@ export const en: typeof fi = {
         updateError: 'Failed to save input data',
         missingIncomeDaysWarningTitle: 'Income information is missing for some days',
         missingIncomeDaysWarningText: (missingIncomePeriodsString: string) =>
-          `Tulotiedot puuttuvat seuraavilta päiviltä: ${missingIncomePeriodsString}. Jos tulotietoja ei lisätä, tulot määräytyvät näille päiville korkeimman maksuluokan mukaan. Tarkista päivämäärät ja lisää tarvittaessa tulotiedot puuttuville päiville.`,
+          `Income information is missing for the following days: ${missingIncomePeriodsString}. If income information is not added, the income for these days will be determined according to the highest fee category. Check the dates and add income information for the missing days if needed.`,
         conflictErrorText:
           'Income data has already been saved for the period! Check the validity periods of income information.',
         closeWarning: 'Remember to save!',
@@ -2137,7 +2139,7 @@ export const en: typeof fi = {
       }: {
         accepted: number
         rejected: number
-      }) => `${accepted} hyväksytään, ${rejected} hylätään`,
+      }) => `${accepted} accepted, ${rejected} rejected`,
       acceptAllButton: 'Confirm your selections',
       application: 'Application',
       birthday: 'Date of birth',
@@ -2159,7 +2161,7 @@ export const en: typeof fi = {
         OTHER: 'Another reason'
       },
       statusLastModified: (name: string, date: string) =>
-        `Viimeksi muokattu ${date}. Muokkaaja: ${name}`,
+        `Last modified ${date}. Edited by: ${name}`,
       subtype: 'Part/Size',
       title: 'Investment proposals',
       type: 'Investment type',
@@ -2249,9 +2251,9 @@ export const en: typeof fi = {
         title: 'Proceedings',
         createEvent: 'Create another event',
         lastModified: (date: string, name: string) =>
-          `Viimeksi muokattu ${date}; muokkaaja: ${name}`,
+          `Last modified ${date}; edited by: ${name}`,
         lastModifiedAt: 'Last modified',
-        lastModifiedBy: 'Adapter',
+        lastModifiedBy: 'Editor',
         edit: {
           title: 'Event',
           saveChanges: 'Save the changes',
@@ -2486,14 +2488,14 @@ export const en: typeof fi = {
       childCount: 'Children present',
       lastModifiedStaff: (date: string, name: string) => (
         <div>
-          <p>*Henkilökunnan tekemä merkintä</p>
+          <p>*Entry made by staff</p>
           <p>
-            Viimeksi muokattu {date}; muokkaaja: {name}
+            Last modified {date}; edited by: {name}
           </p>
         </div>
       ),
       lastModifiedOther: (date: string, name: string) =>
-        `Viimeksi muokattu ${date}; muokkaaja: ${name}`,
+        `Last modified ${date}; edited by: ${name}`,
       reservationModal: {
         title: 'Make a reservation',
         selectedChildren: 'Children for whom the reservation is made',
@@ -2589,8 +2591,8 @@ export const en: typeof fi = {
       },
       incalculableSum:
         'Hours cannot be counted because the last departure time is missing from the day\'s entries.',
-      gapWarning: (gapRange: string) => `Kirjaus puuttuu välillä ${gapRange}`,
-      openAttendanceWarning: (arrival: string) => `Avoin kirjaus ${arrival}`,
+      gapWarning: (gapRange: string) => `An entry is missing during ${gapRange}`,
+      openAttendanceWarning: (arrival: string) => `Open entry ${arrival}`,
       openAttendanceInAnotherUnitWarning: 'Open enrollment',
       openAttendanceInAnotherUnitWarningCont:
         '. The entry must be closed before adding a new one.',
@@ -2744,12 +2746,12 @@ export const en: typeof fi = {
         relatedFeeDecisions: 'Related payment decisions',
         replacedInvoice: 'Replace the bill',
         invoice: 'Invoice',
-        revision: (revisionNumber: number) => `Oikaisulasku ${revisionNumber}`,
+        revision: (revisionNumber: number) => `Corrective invoice ${revisionNumber}`,
         replacedBy: (link: React.ReactNode) => (
-          <>Tämä lasku on oikaistu. Korvaava lasku: {link}</>
+          <>This invoice has been corrected. Replacement invoice: {link}</>
         ),
         replacedByDraft: (link: React.ReactNode) => (
-          <>Tälle laskulle on korvaava oikaisuluonnos: {link}</>
+          <>This invoice has a replacement correction draft: {link}</>
         )
       },
       replacement: {
@@ -2812,7 +2814,7 @@ export const en: typeof fi = {
       error: 'Failed to load decision makers, please try again',
       default: 'The decision maker set in the unit\'s information',
       decisionCount: (count: number) =>
-        count === 1 ? '1 decision selected' : `${count} päätöstä valittu`,
+        count === 1 ? '1 decision selected' : `${count} decisions selected`,
       resolve: (count: number): string =>
         count === 1 ? 'Confirm and create a decision' : 'Validate and create decisions'
     }
@@ -2857,7 +2859,7 @@ export const en: typeof fi = {
     },
     buttons: {
       checked: (count: number) =>
-        count === 1 ? `${count} päätös valittu` : `${count} päätöstä valittu`,
+        count === 1 ? `${count} decision selected` : `${count} decisions selected`,
       createDecision: (count: number): string =>
         count === 1 ? 'Create a decision' : 'Create the decisions',
       ignoreDraft: 'Skip the draft',
@@ -2876,25 +2878,25 @@ export const en: typeof fi = {
     title: 'Are you sure you want to skip the draft?',
     content: (
       <div>
-        <H3>Luonnoksen saa ohittaa vain jos seuraavat asiat pätevät:</H3>
+        <H3>You may skip the draft only if all of the following are true:</H3>
         <ul>
-          <li>Luonnos koskee menneisyyttä, ja</li>
+          <li>The draft concerns the past, and</li>
           <li>
-            Luonnos on väärin, koska menneisyydessä olevat asiakastiedot ovat
-            väärin, ja
+            The draft is incorrect because customer data in the past is
+            incorrect, and
           </li>
-          <li>Samalle ajalle oleva alkuperäinen lähetetty päätös on oikein</li>
+          <li>The original sent decision for the same period is correct</li>
         </ul>
         <p>
-          Mikäli luonnos on väärin koska tiedot ovat väärin (esim. perhesuhteita
-          on takautuvasti poistettu virheellisesti), on tärkeää ensisijaisesti
-          pyrkiä korjaamaan tiedot ennalleen, koska ne vaikuttavat myös muihin
-          järjestelmiin.
+          If the draft is incorrect because the underlying data is incorrect,
+          for example because family relations have been removed retroactively
+          by mistake, the primary goal should be to restore the data because it
+          also affects other systems.
         </p>
         <p>
-          Mikäli luonnos on väärin tai tarpeeton, vaikka tiedot ovat oikein, älä
-          ohita luonnosta, vaan ole yhteydessä kehittäjätiimiin, jotta vika
-          voidaan tutkia ja korjata.
+          If the draft is incorrect or unnecessary even though the data is
+          correct, do not skip the draft. Contact the development team so the
+          issue can be investigated and fixed.
         </p>
       </div>
     ),
@@ -2947,7 +2949,7 @@ export const en: typeof fi = {
     },
     buttons: {
       checked: (count: number) =>
-        count === 1 ? `${count} päätös valittu` : `${count} päätöstä valittu`,
+        count === 1 ? `${count} decision selected` : `${count} decisions selected`,
       createDecision: (count: number): string =>
         count === 1 ? 'Create a decision' : 'Create the decisions',
       ignoreDraft: 'Skip the draft',
@@ -2978,19 +2980,19 @@ export const en: typeof fi = {
     buttons: {
       createPaymentDrafts: 'Create payment material',
       checked: (count: number) =>
-        count === 1 ? `${count} rivi valittu` : `${count} riviä valittu`,
+        count === 1 ? `${count} row selected` : `${count} rows selected`,
       confirmPayments: (count: number) =>
         count === 1
-          ? `Merkitse ${count} maksu tarkastetuksi`
-          : `Merkitse ${count} maksua tarkastetuksi`,
+          ? `Mark ${count} payment as checked`
+          : `Mark ${count} payments as checked`,
       revertPayments: (count: number) =>
         count === 1
-          ? `Palauta ${count} maksu luonnokseksi`
-          : `Palauta ${count} maksua luonnoksiksi`,
+          ? `Return ${count} payment to draft`
+          : `Return ${count} payments to drafts`,
       sendPayments: (count: number) =>
-        count === 1 ? `Siirrä ${count} maksu` : `Siirrä ${count} maksua`,
+        count === 1 ? `Transfer ${count} payment` : `Transfer ${count} payments`,
       deletePayment: (count: number) =>
-        count === 1 ? `Poista ${count} maksu` : `Poista ${count} maksua`
+        count === 1 ? `Delete ${count} payment` : `Delete ${count} payments`
     },
     status: {
       DRAFT: 'Draft',
@@ -3308,7 +3310,7 @@ export const en: typeof fi = {
     missingHolidayQuestionnaireAnswer:
       'The guardian has not answered the absence survey',
     shiftCare: 'Evening/day care',
-    requiresBackupCare: 'Waiting for reserve investment',
+    requiresBackupCare: 'Waiting for backup placement',
     additionalLegendItems: {
       CONTRACT_DAYS: 'Contractual service requirement'
     },
@@ -3657,7 +3659,7 @@ export const en: typeof fi = {
         'attendance_reservation.child_id': 'Attendance bookings',
         'attendance_reservation.created_by_guardian_id':
           'Self-marked attendance bookings',
-        'backup_care.child_id': 'Backup investments',
+        'backup_care.child_id': 'Backup placements',
         'backup_pickup.child_id': 'Reserve applicants',
         'calendar_event_attendee.child_id': 'As a calendar participant',
         'child_attendance.child_id': 'Attendance',
@@ -3782,7 +3784,7 @@ export const en: typeof fi = {
     partnersInDifferentAddress: {
       title: 'Spouse at different address',
       description:
-        'The report lists the persons whose refrigerator spouse lives at a different address according to VTJ. Check if these people are really common-law partners anymore.',
+        'The report lists the people whose spouse lives at a different address according to VTJ. Check whether these people are still cohabiting partners.',
       person1: 'Person',
       address1: 'Address',
       person2: 'Spouse',
@@ -3816,18 +3818,18 @@ export const en: typeof fi = {
       name: 'Name',
       careAreaName: 'Service area',
       careTypeCentre: 'Daycare center',
-      careTypeFamily: <span>Perhe&shy;päivä&shy;hoito</span>,
+      careTypeFamily: <span>Family day care</span>,
       careTypeFamilyStr: 'Family day care',
-      careTypeGroupFamily: <span>Ryhmä&shy;perhe&shy;päivä&shy;hoito</span>,
+      careTypeGroupFamily: <span>Group family day care</span>,
       careTypeGroupFamilyStr: 'Group family daycare',
       careTypeClub: 'Club',
       careTypePreschool: 'Preschool education',
       careTypePreparatoryEducation: 'Preparatory education',
-      clubApply: <span>Kerho&shy;haku</span>,
+      clubApply: <span>Club search</span>,
       clubApplyStr: 'Club search',
-      daycareApply: <span>Päiväkoti&shy;haku</span>,
+      daycareApply: <span>Daycare search</span>,
       daycareApplyStr: 'Kindergarten search',
-      preschoolApply: <span>Esiopetus&shy;haku</span>,
+      preschoolApply: <span>Preschool search</span>,
       preschoolApplyStr: 'Preschool search',
       providerType: 'Form of organization',
       uploadToVarda: 'Varda',
@@ -3851,7 +3853,7 @@ export const en: typeof fi = {
     childrenInDifferentAddress: {
       title: 'Child at a different address',
       description:
-        'The report lists the principals whose refrigerator child lives at a different address, according to VTJ. Some of these may be errors that should be corrected.',
+        'The report lists guardians whose child lives at a different address according to VTJ. Some of these may be errors that should be corrected.',
       person1: 'Principal',
       address1: 'Principal\'s address',
       person2: 'Child',
@@ -4160,16 +4162,16 @@ export const en: typeof fi = {
         'Report on the coming year\'s pre-school children and units for the automatic placement tool',
       futurePreschoolersCount: (count: number) =>
         count === 1
-          ? `${count} tuleva esikoululainen`
-          : `${count} tulevaa esikoululaista`,
+          ? `${count} future preschooler`
+          : `${count} future preschoolers`,
       preschoolUnitCount: (count: number) =>
         count === 1
-          ? `${count} esiopetusta antava yksikkö`
-          : `${count} esiopetusta antavaa yksikköä`,
+          ? `${count} preschool education unit`
+          : `${count} preschool education units`,
       sourceUnitCount: (count: number) =>
         count === 1
-          ? `${count} tulevien esikoululaisten nykyinen yksikkö`
-          : `${count} tulevien esikoululaisten nykyistä yksikköä`
+          ? `${count} current unit of a future preschooler`
+          : `${count} current units of future preschoolers`
     },
     meals: {
       title: 'Diner numbers',
@@ -4492,8 +4494,8 @@ export const en: typeof fi = {
         handler: [
           'Service control',
           'Director of the early childhood education unit',
-          'Ledare inom småbarnspedagogik',
-          'Svenska bildningstjänster / Småbarnspedagogik'
+          'Leader in early childhood education',
+          'Swedish education services / early childhood education'
         ]
       },
       nekkuNoWeekendMealOrders: 'Nekku orders are not made for weekends'
@@ -4557,7 +4559,7 @@ export const en: typeof fi = {
         'Incorrect entry in the operating hours of the unit\'s shift care',
       mealTimes: 'Incorrect entry in the unit\'s meal times',
       closingDateBeforeLastPlacementDate: (lastPlacementDate: LocalDate) =>
-        `Yksikössä on sijoituksia ${lastPlacementDate.format()} asti. Kaikki sijoitukset ja varasijoitukset tulee päättää yksikön päättymispäivään mennessä, mukaan lukien myös mahdolliset tulevaisuuden sijoitukset.`
+        `The unit has placements until ${lastPlacementDate.format()}. All placements and backup placements must end no later than the unit's closing date, including any future placements.`
     },
     warning: {
       onlyMunicipalUnitsShouldBeSentToVarda:
@@ -4662,9 +4664,9 @@ export const en: typeof fi = {
       recipients: 'Recipients',
       recipientCount: 'Recipients',
       manyRecipientsWarning: {
-        title: (count: number) => `Viestillä on ${count} vastaanottajaa.`,
+        title: (count: number) => `The message has ${count} recipients.`,
         text: (count: number) =>
-          `Tämä viesti on lähdössä ${count} vastaanottajalle. Oletko varma, että haluat lähettää viestin?`
+          `This message is about to be sent to ${count} recipients. Are you sure you want to send it?`
       },
       type: {
         label: 'Message type',
@@ -4764,7 +4766,7 @@ export const en: typeof fi = {
           hasScheduled:
             'The person already has future permits in the following units',
           currentEnding: (date: LocalDate) =>
-            `Päällekkäiset luvitukset korvataan ${date.format()} alkaen.`,
+            `Overlapping permits will be replaced from ${date.format()} onwards.`,
           currentRemoved: 'These authorizations will be deleted.',
           scheduledRemoved: 'These future authorizations will be deleted.'
         }
@@ -4834,44 +4836,44 @@ export const en: typeof fi = {
       validity: 'Validity period',
       baseValue: (
         <>
-          Perusarvo,
+          Base value,
           <br />
-          3v tai yli (€)
+          age 3 or over (€)
         </>
       ),
       coefficient: (
         <>
-          Kerroin,
+          Coefficient,
           <br />
-          3v tai yli
+          age 3 or over
         </>
       ),
       value: (
         <>
-          Enimmäisarvo,
+          Maximum value,
           <br />
-          3v tai yli (€)
+          age 3 or over (€)
         </>
       ),
       baseValueUnder3y: (
         <>
-          Perusarvo,
+          Base value,
           <br />
-          alle 3v
+          under 3 years
         </>
       ),
       coefficientUnder3y: (
         <>
-          Kerroin,
+          Coefficient,
           <br />
-          alle 3v
+          under 3 years
         </>
       ),
       valueUnder3y: (
         <>
-          Enimmäisarvo,
+          Maximum value,
           <br />
-          alle 3v (€)
+          under 3 years (€)
         </>
       ),
       errors: {
@@ -5036,9 +5038,9 @@ export const en: typeof fi = {
       ADMIN: 'Master user',
       DIRECTOR: 'Administration',
       MESSAGING: 'Communication',
-      REPORT_VIEWER: 'Reportage',
-      FINANCE_ADMIN: 'Economic',
-      FINANCE_STAFF: 'Household employee (external)',
+      REPORT_VIEWER: 'Reports',
+      FINANCE_ADMIN: 'Finance',
+      FINANCE_STAFF: 'Finance staff (external)',
       SERVICE_WORKER: 'Service control',
       SPECIAL_EDUCATION_TEACHER: 'Special education teacher',
       EARLY_CHILDHOOD_EDUCATION_SECRETARY: 'Secretary of Early Childhood Education',
@@ -5207,7 +5209,7 @@ export const en: typeof fi = {
     preschoolTermWarning:
       'eVaka lacks a definition of the next preschool period. The pre-school period is needed for creating applications.',
     validation: (count: number, existing: number) =>
-      `Olet tuomassa ${count} sijoitusta${existing > 0 ? ` (joista ${existing} löytyy jo järjestelmästä)` : ''}, jatka?`
+      `You are importing ${count} placements${existing > 0 ? ` (${existing} already exist in the system)` : ''}. Continue?`
   },
   outOfOffice: {
     menu: 'Director\'s absence period',

@@ -180,12 +180,12 @@ export const en: typeof fi = {
       multiselect: {
         toggle: 'Register more than one child',
         confirmArrival: (count: number) =>
-          `Merkitse saapuneeksi${
-            count > 1 ? `: ${count} lasta` : count === 1 ? ': 1 child' : ''
+          `Mark as arrived${
+            count > 1 ? `: ${count} children` : count === 1 ? ': 1 child' : ''
           }`,
         confirmDeparture: (count: number) =>
-          `Merkitse lähteneeksi${
-            count > 1 ? `: ${count} lasta` : count === 1 ? ': 1 child' : ''
+          `Mark as departed${
+            count > 1 ? `: ${count} children` : count === 1 ? ': 1 child' : ''
           }`,
         select: 'Select',
         selected: 'Chosen'
@@ -199,10 +199,10 @@ export const en: typeof fi = {
       cancelAbsence: 'Cancel absence',
       markPresent: (count: number) =>
         count > 1
-          ? `Merkitse saapuneeksi ${count} lasta`
-          : 'Mark as received',
-      markDeparted: 'Mark as sent',
-      returnToComing: 'Return to what\'s coming',
+          ? `Mark as arrived ${count} children`
+          : 'Mark as arrived',
+      markDeparted: 'Mark as departed',
+      returnToComing: 'Return to upcoming',
       returnToPresent: 'Return to present',
       or: 'or',
       returnToPresentNoTimeNeeded:
@@ -236,9 +236,9 @@ export const en: typeof fi = {
       reservation: 'Reservation',
       reservations: 'Reservations',
       serviceToday: (start: string, end: string) =>
-        `Varhaiskasvatusaika tänään ${start}-${end}`,
+        `Early childhood education time today ${start}-${end}`,
       serviceTodayShort: (start: string, end: string) =>
-        `Sop.aika ${start}-${end}`,
+        `Reserved ${start}-${end}`,
       noServiceToday: 'No reserved early childhood education time today',
       noServiceTodayShort: 'No appointment today',
       notSet: 'Presence notification is missing',
@@ -363,9 +363,9 @@ export const en: typeof fi = {
     departureCannotBeDoneInFuture:
       'The check-out of the work shift cannot be marked in advance.',
     arrivalIsBeforeDeparture: (departure: string) =>
-      `Annettu aika on ennen edellistä lähtöaikaa ${departure}`,
+      `The given time is before the previous departure time ${departure}`,
     departureIsBeforeArrival: (arrival: string) =>
-      `Annettu aika on ennen viimeisintä saapumisaikaa ${arrival}`,
+      `The given time is before the latest arrival time ${arrival}`,
     confirmAttendanceChangeCancel:
       'Are you sure you want to cancel the last departure or arrival entry?',
     notOperationalDate:
@@ -486,9 +486,9 @@ export const en: typeof fi = {
       sending: 'Sending',
       recipientCount: 'Recipients',
       manyRecipientsWarning: {
-        title: (count: number) => `Viestillä on ${count} vastaanottajaa.`,
+        title: (count: number) => `The message has ${count} recipients.`,
         text: (count: number) =>
-          `Tämä viesti on lähdössä ${count} vastaanottajalle. Oletko varma, että haluat lähettää viestin?`
+          `This message is about to be sent to ${count} recipients. Are you sure you want to send it?`
       }
     },
     emptyInbox: 'Your inbox is empty',
